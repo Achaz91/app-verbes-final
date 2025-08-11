@@ -6,7 +6,8 @@ const config = {
     preprocess: vitePreprocess(),
     kit: {
         adapter: adapter({
-            fallback: null,
+            // CORRECTION : On ajoute un fallback pour les SPA
+            fallback: 'index.html',
             pages: 'build',
             assets: 'build',
             precompress: false,
